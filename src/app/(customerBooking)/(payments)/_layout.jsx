@@ -3,7 +3,10 @@ import React from 'react'
 
 const paymentLayout = () => {
   return (
-    <Stack />
+    <Stack>
+      <Stack.Screen name="bookingConfirmation"/>
+      <Stack.Screen name="paymentMethod"/>
+    </Stack>
   )
 }
 

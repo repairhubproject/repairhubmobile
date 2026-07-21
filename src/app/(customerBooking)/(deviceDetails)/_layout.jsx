@@ -3,7 +3,11 @@ import React from 'react'
 
 const deviceDetailsLayout = () => {
   return (
-    <Stack />
+    <Stack>
+      <Stack.Screen name="deviceDetails"/>
+      <Stack.Screen name="receivedQuotation"/>
+      <Stack.Screen name="selectTechnician"/>
+    </Stack>
   )
 }
 

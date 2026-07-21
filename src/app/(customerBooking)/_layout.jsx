@@ -3,7 +3,18 @@ import React from 'react'
 
 const Bookinglayout = () => {
   return (
-    <Stack />
+    <Stack>
+      <Stack.Screen name="(deviceDetails)" />
+      <Stack.Screen name="(payments)" />
+      <Stack.Screen name="customerAddress" />
+      <Stack.Screen name="repairCompletion" />
+      <Stack.Screen name="repairForm" />
+      <Stack.Screen name="repairHistory" />
+      <Stack.Screen name="repairRequest" />
+      <Stack.Screen name="repairServices" />
+      <Stack.Screen name="repairUpload" />
+
+    </Stack>
   )
 }
 
