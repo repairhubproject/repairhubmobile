@@ -1,7 +1,7 @@
-import { Tabs } from 'react-native'
+import { Tabs } from "expo-router";
 import React from 'react'
 
-const Tabslayout = () => {
+export default function Tabslayout() {
   return (
     <Tabs>
         <Tabs.Screen name="index" options={{title: "Home"}}/>
@@ -13,7 +13,3 @@ const Tabslayout = () => {
     </Tabs>
   )
 }
-
-export default _layout
-
-const styles = StyleSheet.create({})

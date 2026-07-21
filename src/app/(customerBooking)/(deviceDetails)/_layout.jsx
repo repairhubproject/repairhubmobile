@@ -1,7 +1,7 @@
-import { Stack } from 'react-native'
+import { Stack } from "expo-router";
 import React from 'react'
 
-const deviceDetailsLayout = () => {
+export default function deviceDetailsLayout() {
   return (
     <Stack>
       <Stack.Screen name="deviceDetails"/>
@@ -10,7 +10,3 @@ const deviceDetailsLayout = () => {
     </Stack>
   )
 }
-
-export default deviceDetailsLayout
-
-const styles = StyleSheet.create({})

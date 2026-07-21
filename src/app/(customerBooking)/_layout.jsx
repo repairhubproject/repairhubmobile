@@ -1,7 +1,7 @@
-import { Stack } from 'react-native'
+import { Stack } from "expo-router";
 import React from 'react'
 
-const Bookinglayout = () => {
+export default function Bookinglayout() {
   return (
     <Stack>
       <Stack.Screen name="(deviceDetails)" />
@@ -17,7 +17,3 @@ const Bookinglayout = () => {
     </Stack>
   )
 }
-
-export default _layout
-
-const styles = StyleSheet.create({})

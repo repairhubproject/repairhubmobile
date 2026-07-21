@@ -1,7 +1,7 @@
-import { Stack } from 'react-native'
+import { Stack } from "expo-router";
 import React from 'react'
 
-const authlayout = () => {
+export default function authlayout(){
   return (
     <Stack>
         <Stack.Screen name="login"/>
@@ -10,6 +10,3 @@ const authlayout = () => {
   )
 }
 
-export default authlayout
-
-const styles = StyleSheet.create({})

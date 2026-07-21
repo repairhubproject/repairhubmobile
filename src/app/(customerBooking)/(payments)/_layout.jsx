@@ -1,7 +1,7 @@
-import { Stack } from 'react-native'
+import { Stack } from "expo-router";
 import React from 'react'
 
-const paymentLayout = () => {
+export default function paymentLayout() {
   return (
     <Stack>
       <Stack.Screen name="bookingConfirmation"/>
@@ -10,6 +10,3 @@ const paymentLayout = () => {
   )
 }
 
-export default paymentLayout
-
-const styles = StyleSheet.create({})
