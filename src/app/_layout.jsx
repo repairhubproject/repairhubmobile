@@ -1,17 +1,30 @@
 import { Stack } from "expo-router";
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from "react";
 
 export default function RootLayout() {
+  SplashScreen.preventAutoHideAsync()
+  const [loaded, error] = useFonts({
+    "poppins-regular": require("../../assets/fonts/Poppins/Poppins-Regular.ttf"),
+    "poppins-semi-bold": require("../../assets/fonts/Poppins/Poppins-SemiBold.ttf"),
+    "poppins-bold": require("../../assets/fonts/Poppins/Poppins-Bold.ttf"),
+    "poppins-extra-bold": require("../../assets/fonts/Poppins/Poppins-ExtraBold.ttf")
+  })
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
   return (
-      <Stack>
-        <Stack.Screen name="(auth)"/>
-        <Stack.Screen name="(tabs)"/>
-        <Stack.Screen name="(customerBooking)"/>
-        <Stack.Screen name="allCategories"/>
-        <Stack.Screen name="editProfile"/>
-        <Stack.Screen name="onboarding"/>
-        <Stack.Screen name="reviews"/>
-        <Stack.Screen name="search"/>
-        <Stack.Screen name="support"/>
+      <Stack screenOptions={{headerShown: false}}>
+        <Stack.Screen name="(customer)"/>
+        <Stack.Screen name="(technician)"/>
       </Stack>
     );
 }
