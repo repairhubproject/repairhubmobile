@@ -1,15 +1,12 @@
-import { Tabs } from "expo-router";
-import React from 'react'
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
-import Ionicons from '@react-native-vector-icons/ionicons';
+import { Tabs } from "expo-router";
 
 export default function Tabslayout() {
   return (
     <Tabs screenOptions={{headerShown: false}}>
-        <Tabs.Screen name="index" options={{title: "Home",
-          tabBarIcon:({focused})=>(<MaterialDesignIcons name={focused ? "home-variant" : "home-variant-outline"} size={26} color="blue"   />
-          )
-           
+        <Tabs.Screen name="home" options={{title: "Home",
+          tabBarIcon:({focused})=>(<MaterialDesignIcons name={focused ? "home-variant" : "home-variant-outline"} size={26} color="blue" />
+          )    
         }}/>
         <Tabs.Screen name="techniciansProfile" options={{title: "Technician Profile",
           tabBarIcon:({focused})=>(<MaterialDesignIcons name={focused ? "account-wrench" : "account-wrench-outline"} size={26} color="blue"   />

@@ -1,10 +1,10 @@
-import { Text, View, StyleSheet, Image, Dimensions, TextInput, FlatList, Pressable, ImageBackground } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
 import Ionicons from '@react-native-vector-icons/ionicons';
+import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
 import { Link } from "expo-router";
-import { data } from '../../../../data'
 import { useEffect, useState } from "react";
+import { FlatList, Image, ImageBackground, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { data } from '../../../../data';
 
 
 const profileImage = require('../../../../assets/images/profilePicture.png')

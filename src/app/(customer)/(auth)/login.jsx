@@ -69,7 +69,7 @@ const Login = () => {
            </TouchableOpacity>
           </View>
 
-          <TouchableOpacity onPress={() => router.push('/')}
+          <TouchableOpacity onPress={() => router.push('/home')}
           style={styles.TouchableOpacity}>
             <Text style={{color: 'white', fontFamily:'CustomFont-Medium', fontSize: 24, fontWeight: '500' }}>
               Login</Text>
