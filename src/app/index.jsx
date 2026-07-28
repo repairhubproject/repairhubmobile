@@ -16,9 +16,10 @@ const Index = () => {
    'CustomFont-SemiBold': require('../../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
    'CustomFont-Medium': require('../../assets/fonts/Poppins/Poppins-Medium.ttf'),
    });
+   const {width: SCREEN_WIDTH} = Dimensions.get('screen');
    return(
     <SafeAreaView style={{flex:1, backgroundColor:'white'}}>
-      <View style={{flex:1, justifyContent: 'flex-end', marginTop:40,}}>
+      <View style={{flex:1, justifyContent: 'flex-end', marginTop:20,}}>
         <Text onPress={() => router.push('login')} 
         style={{color:'black', fontSize:16, fontFamily:'CustomFont-Regular', textAlign:'right', paddingHorizontal:20}}>
           Skip
@@ -27,11 +28,12 @@ const Index = () => {
 
       <ScrollView 
         horizontal={true}
-        showsHorizontalScrollIndicator={true}
-        contentContainerStyle={{paddingHorizontal: 10}}>
-          <View style={{flexDirection:'column'}}>
+        showsHorizontalScrollIndicator={false}
+        pagingEnabled={true}
+        contentContainerStyle={{paddingHorizontal:20, alignItems:'center'}}>
+          <View style={{width: SCREEN_WIDTH, alignItems:'center', justifyContent:'center', paddingRight: 20}}>
         <Image source={require('../../assets/images/onboarding-image1.png')}
-        style={{height:500, width:310, resizeMode:'contain', marginTop:-195 }}>
+        style={{height:400, width:'100%', resizeMode:'contain', marginTop:-150}}>
         </Image>
         <Text style={styles.mainText}>
           Find Trusted Repair 
@@ -42,19 +44,17 @@ const Index = () => {
         </Text>
         </View>
       
-        <View style={{flexDirection:'column'}}>
+        <View style={{width: SCREEN_WIDTH, alignItems:'center', justifyContent:'center', paddingRight: 20}}>
         <Image source={require('../../assets/images/onboarding-image2.png')}
-        style={{height:570, width: 318, resizeMode: 'contain', marginTop:-40}}>
+        style={{height:420, width:'100%', resizeMode: 'contain', marginTop:-150}}>
         </Image>
-        <Text styles={styles.mainText}>
+        <Text style={styles.mainText}>
           Track Your Repair Progress
         </Text>
-        <Text styles={styles.subText}>
+        <Text style={styles.subText}>
           Stay updated from request to completion with real-time repair tracking.
         </Text>
         </View>
-        
-        
       </ScrollView>
 
 
@@ -89,7 +89,7 @@ mainText: {
   color: '#000000',
   textAlign: 'center',
   marginTop: -60,
-  marginBottom: 20,
+  marginBottom: 10,
 },
 subText: {
   fontSize: 14,
@@ -98,7 +98,6 @@ subText: {
   color: '#000000',
   textAlign: 'center',
   marginBottom: 10,
-  paddingHorizontal: 20,
   marginTop: -10,
 },
 touchableOpacity:{
@@ -107,7 +106,7 @@ touchableOpacity:{
   height: 62,
   paddingHorizontal: 20,
   marginBottom: 15,
-  marginTop: 60,
+  marginTop: 15,
   justifyContent: 'center',
   alignItems: 'center',
 },
