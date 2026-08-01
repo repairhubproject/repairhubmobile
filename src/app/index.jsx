@@ -20,7 +20,7 @@ const Index = () => {
    return(
     <SafeAreaView style={{flex:1, backgroundColor:'white'}}>
       <View style={{flex:1, justifyContent: 'flex-end', marginTop:20,}}>
-        <Text onPress={() => router.push('login')} 
+        <Text onPress={() => router.push('welcome')} 
         style={{color:'black', fontSize:16, fontFamily:'CustomFont-Regular', textAlign:'right', paddingHorizontal:20}}>
           Skip
         </Text>
@@ -60,7 +60,7 @@ const Index = () => {
 
 
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => router.push('login')}
+            <TouchableOpacity onPress={() => router.push('welcome')}
                 style={styles.touchableOpacity}>
              <Text style={{color: 'white', fontFamily:'CustomFont-Medium', fontSize: 22, fontWeight: '500' }}>
                 Continue
